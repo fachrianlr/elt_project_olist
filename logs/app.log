@@ -1,0 +1,6 @@
+2024-10-16 07:58:18,644 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 07:58:18,647 - ERROR - Error querying the database: (psycopg2.ProgrammingError) can't execute an empty query
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-16 07:58:18,656 - ERROR - Error saving data to CSV: 'NoneType' object has no attribute 'to_csv'
+2024-10-16 07:58:18,672 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 07:58:18,672 - INFO - successfully extracted data
