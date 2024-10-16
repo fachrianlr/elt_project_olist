@@ -34,7 +34,7 @@ def extract_data(file_mapping):
         sql_path = os.path.join(sql_folder, sql_name)
         str_sql = read_file(sql_path)
         df = select_to_df(engine, str_sql)
-        dim_customer_path = os.path.join(PARENT_FOLDER, "data", "load", csv_name)
+        dim_customer_path = os.path.join(PARENT_FOLDER, "data", "extract", csv_name)
         save_to_csv(df, dim_customer_path)
 
 

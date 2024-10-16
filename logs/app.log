@@ -891,3 +891,212 @@ This progress looks :) because there were no failed tasks or missing dependencie
 
 ===== Luigi Execution Summary =====
 
+2024-10-16 13:05:15,515 - INFO - start transform data
+2024-10-16 13:05:15,515 - ERROR - failed to load data: DictWriter.__init__() missing 1 required positional argument: 'fieldnames'
+2024-10-16 13:06:07,879 - INFO - start transform data
+2024-10-16 13:06:07,880 - ERROR - failed to load data: 'str' object has no attribute 'keys'
+2024-10-16 13:06:46,115 - INFO - start transform data
+2024-10-16 13:06:46,116 - ERROR - failed to load data: 'str' object has no attribute 'keys'
+2024-10-16 13:08:00,171 - INFO - start transform data
+2024-10-16 13:16:25,592 - INFO - start load data
+2024-10-16 13:16:28,862 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:16:28,867 - ERROR - failed to load data: 'str' object has no attribute 'keys'
+2024-10-16 13:18:31,649 - INFO - start extract data
+2024-10-16 13:18:31,650 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 13:18:32,167 - ERROR - Error saving data to CSV: Cannot save file into a non-existent directory: 'C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract'
+2024-10-16 13:18:32,168 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 13:18:32,366 - ERROR - Error saving data to CSV: Cannot save file into a non-existent directory: 'C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract'
+2024-10-16 13:18:32,367 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 13:18:32,380 - ERROR - Error saving data to CSV: Cannot save file into a non-existent directory: 'C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract'
+2024-10-16 13:18:52,971 - INFO - start extract data
+2024-10-16 13:18:52,971 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 13:18:53,393 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv
+2024-10-16 13:18:53,393 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 13:18:53,716 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv
+2024-10-16 13:18:53,717 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 13:18:53,737 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv
+2024-10-16 13:19:06,953 - INFO - start load data
+2024-10-16 13:19:09,968 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:19:09,972 - ERROR - failed to load data: 'str' object has no attribute 'keys'
+2024-10-16 13:19:59,906 - INFO - start load data
+2024-10-16 13:19:59,938 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:19:59,938 - ERROR - failed to load data: 'str' object has no attribute 'keys'
+2024-10-16 13:20:22,262 - INFO - start load data
+2024-10-16 13:20:22,302 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:20:23,835 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:20:24,033 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:21:21,412 - INFO - start load data
+2024-10-16 13:21:21,442 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:21:21,443 - ERROR - failed to load data: 'str' object has no attribute 'keys'
+2024-10-16 13:22:18,623 - INFO - start load data
+2024-10-16 13:22:18,655 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:22:20,120 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:22:20,329 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:23:42,891 - INFO - start load data
+2024-10-16 13:23:42,927 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:23:44,432 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:23:44,633 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:27:34,292 - INFO - start load data
+2024-10-16 13:27:34,323 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:27:35,857 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:27:36,097 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:28:07,977 - INFO - start load data
+2024-10-16 13:28:08,007 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:28:09,596 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:28:09,834 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:28:36,880 - INFO - logging configured by default settings
+2024-10-16 13:28:36,981 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 13:28:36,981 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 13:28:36,982 - INFO - Done scheduling tasks
+2024-10-16 13:28:36,982 - INFO - Running Worker with 1 processes
+2024-10-16 13:28:36,982 - INFO - [pid 3064] Worker Worker(salt=2736396415, workers=1, host=Rian, username=fachr, pid=3064) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:28:37,025 - INFO - start load data
+2024-10-16 13:28:37,054 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:28:38,472 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:28:38,712 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:28:38,717 - INFO - [pid 3064] Worker Worker(salt=2736396415, workers=1, host=Rian, username=fachr, pid=3064) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:28:38,718 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 13:28:38,718 - INFO - Worker Worker(salt=2736396415, workers=1, host=Rian, username=fachr, pid=3064) was stopped. Shutting down Keep-Alive thread
+2024-10-16 13:28:38,719 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 13:29:00,220 - INFO - logging configured by default settings
+2024-10-16 13:29:00,229 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 13:29:00,230 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 13:29:00,230 - INFO - Done scheduling tasks
+2024-10-16 13:29:00,230 - INFO - Running Worker with 1 processes
+2024-10-16 13:29:00,230 - INFO - [pid 3216] Worker Worker(salt=4785885096, workers=1, host=Rian, username=fachr, pid=3216) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:29:00,274 - INFO - start load data
+2024-10-16 13:29:00,302 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:29:02,036 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:29:02,275 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:29:02,282 - INFO - [pid 3216] Worker Worker(salt=4785885096, workers=1, host=Rian, username=fachr, pid=3216) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:29:02,283 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 13:29:02,283 - INFO - Worker Worker(salt=4785885096, workers=1, host=Rian, username=fachr, pid=3216) was stopped. Shutting down Keep-Alive thread
+2024-10-16 13:29:02,284 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 13:29:45,771 - INFO - logging configured by default settings
+2024-10-16 13:29:45,779 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 13:29:45,779 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 13:29:45,779 - INFO - Done scheduling tasks
+2024-10-16 13:29:45,779 - INFO - Running Worker with 1 processes
+2024-10-16 13:29:45,779 - INFO - [pid 10924] Worker Worker(salt=9706285289, workers=1, host=Rian, username=fachr, pid=10924) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:29:45,827 - INFO - start load data
+2024-10-16 13:29:45,862 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:29:47,414 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:29:47,642 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:29:47,649 - INFO - [pid 10924] Worker Worker(salt=9706285289, workers=1, host=Rian, username=fachr, pid=10924) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:29:47,650 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 13:29:47,650 - INFO - Worker Worker(salt=9706285289, workers=1, host=Rian, username=fachr, pid=10924) was stopped. Shutting down Keep-Alive thread
+2024-10-16 13:29:47,651 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 13:33:56,984 - INFO - start load data
+2024-10-16 13:33:57,013 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:33:58,533 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:33:58,769 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:36:19,998 - INFO - logging configured by default settings
+2024-10-16 13:36:20,006 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 13:36:20,006 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 13:36:20,006 - INFO - Done scheduling tasks
+2024-10-16 13:36:20,006 - INFO - Running Worker with 1 processes
+2024-10-16 13:36:20,006 - INFO - [pid 13272] Worker Worker(salt=6605902123, workers=1, host=Rian, username=fachr, pid=13272) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:36:20,055 - INFO - start load data
+2024-10-16 13:36:20,099 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:36:21,645 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:36:21,881 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:36:21,887 - INFO - [pid 13272] Worker Worker(salt=6605902123, workers=1, host=Rian, username=fachr, pid=13272) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:36:21,889 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 13:36:21,889 - INFO - Worker Worker(salt=6605902123, workers=1, host=Rian, username=fachr, pid=13272) was stopped. Shutting down Keep-Alive thread
+2024-10-16 13:36:21,890 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 13:36:33,215 - INFO - logging configured by default settings
+2024-10-16 13:36:33,221 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 13:36:33,222 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 13:36:33,222 - INFO - Done scheduling tasks
+2024-10-16 13:36:33,222 - INFO - Running Worker with 1 processes
+2024-10-16 13:36:33,222 - INFO - [pid 16920] Worker Worker(salt=9535305300, workers=1, host=Rian, username=fachr, pid=16920) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:36:33,270 - INFO - start load data
+2024-10-16 13:36:33,306 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 13:36:34,957 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 13:36:35,188 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 13:36:35,194 - INFO - [pid 16920] Worker Worker(salt=9535305300, workers=1, host=Rian, username=fachr, pid=16920) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 13:36:35,195 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 13:36:35,195 - INFO - Worker Worker(salt=9535305300, workers=1, host=Rian, username=fachr, pid=16920) was stopped. Shutting down Keep-Alive thread
+2024-10-16 13:36:35,196 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+

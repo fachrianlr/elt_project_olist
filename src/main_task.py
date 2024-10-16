@@ -14,7 +14,7 @@ class ExtractTask(luigi.Task):
 
     def output(self):
         file_mapping_dict = json.loads(extract_file_mapping)
-        return {csv_name: luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "load", csv_name)) for _, csv_name in
+        return {csv_name: luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "extract", csv_name)) for _, csv_name in
                 file_mapping_dict.items()}
 
     def run(self):
@@ -30,8 +30,7 @@ class LoadTask(luigi.Task):
         return ExtractTask(extract_file_mapping=extract_file_mapping)
 
     def output(self):
-        # return luigi.LocalTarget('data/loaded.csv')
-        pass
+        luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "load", "status.csv"))
 
     def run(self):
         file_mapping_dict = json.loads(load_file_mapping)

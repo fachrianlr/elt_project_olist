@@ -3,6 +3,11 @@ import pandas as pd
 from src.config.logging_conf import logger
 
 
+def total_data_csv(file_path):
+    df = pd.read_csv(file_path, header=None)
+    return len(df)
+
+
 def select_to_df(engine, sql):
     try:
         # SQL query to select data
