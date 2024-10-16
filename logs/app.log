@@ -1657,3 +1657,583 @@ This progress looks :( because there were failed tasks
 
 ===== Luigi Execution Summary =====
 
+2024-10-16 17:49:24,573 - INFO - logging configured by default settings
+2024-10-16 17:49:24,580 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:49:24,581 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:49:24,581 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   PENDING
+2024-10-16 17:49:24,581 - INFO - Done scheduling tasks
+2024-10-16 17:49:24,581 - INFO - Running Worker with 1 processes
+2024-10-16 17:49:24,581 - INFO - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) running   ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 17:49:24,626 - INFO - start extract data
+2024-10-16 17:49:24,626 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 17:49:25,045 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv
+2024-10-16 17:49:25,045 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 17:49:25,369 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv
+2024-10-16 17:49:25,369 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 17:49:25,385 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv
+2024-10-16 17:49:25,385 - INFO - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) done      ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 17:49:25,386 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 17:49:25,387 - INFO - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:49:25,388 - INFO - start load data
+2024-10-16 17:49:28,356 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 17:49:29,715 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 17:49:29,976 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 17:49:29,981 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 17:49:29,981 - INFO - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:49:29,983 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 17:49:29,983 - INFO - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:49:29,984 - ERROR - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 17:49:29,986 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 17:49:29,986 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:49:29,987 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:49:29,987 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 17:49:29,987 - INFO - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:49:29,987 - ERROR - [pid 9736] Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 17:49:29,989 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 17:49:29,989 - INFO - Worker Worker(salt=7379524406, workers=1, host=Rian, username=fachr, pid=9736) was stopped. Shutting down Keep-Alive thread
+2024-10-16 17:49:29,990 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 2 ran successfully:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+    - 1 LoadTask(...)
+* 1 failed:
+    - 1 TransformTask(...)
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 17:52:37,838 - INFO - logging configured by default settings
+2024-10-16 17:52:37,845 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:52:37,845 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 17:52:37,845 - INFO - Done scheduling tasks
+2024-10-16 17:52:37,845 - INFO - Running Worker with 1 processes
+2024-10-16 17:52:37,845 - INFO - [pid 23888] Worker Worker(salt=4203239225, workers=1, host=Rian, username=fachr, pid=23888) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:52:37,898 - INFO - start load data
+2024-10-16 17:52:41,012 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 17:52:42,481 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 17:52:42,737 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 17:52:42,742 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 17:52:42,742 - INFO - [pid 23888] Worker Worker(salt=4203239225, workers=1, host=Rian, username=fachr, pid=23888) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:52:42,743 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 17:52:42,743 - INFO - Worker Worker(salt=4203239225, workers=1, host=Rian, username=fachr, pid=23888) was stopped. Shutting down Keep-Alive thread
+2024-10-16 17:52:42,744 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 17:58:45,769 - INFO - logging configured by default settings
+2024-10-16 17:58:45,776 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:58:45,777 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:58:45,777 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 17:58:45,777 - INFO - Done scheduling tasks
+2024-10-16 17:58:45,777 - INFO - Running Worker with 1 processes
+2024-10-16 17:58:45,778 - INFO - [pid 15692] Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:58:45,830 - INFO - start load data
+2024-10-16 17:58:48,782 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 17:58:50,209 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 17:58:50,470 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 17:58:50,474 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 17:58:50,474 - INFO - [pid 15692] Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:58:50,477 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 17:58:50,477 - INFO - [pid 15692] Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:58:50,478 - ERROR - [pid 15692] Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 17:58:50,480 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 17:58:50,481 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:58:50,481 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 17:58:50,481 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 17:58:50,482 - INFO - [pid 15692] Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 17:58:50,482 - ERROR - [pid 15692] Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 17:58:50,484 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 17:58:50,484 - INFO - Worker Worker(salt=9849304134, workers=1, host=Rian, username=fachr, pid=15692) was stopped. Shutting down Keep-Alive thread
+2024-10-16 17:58:50,485 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+* 1 failed:
+    - 1 TransformTask(...)
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 18:06:55,743 - INFO - logging configured by default settings
+2024-10-16 18:06:55,750 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 18:06:55,750 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 18:06:55,750 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 18:06:55,750 - INFO - Done scheduling tasks
+2024-10-16 18:06:55,751 - INFO - Running Worker with 1 processes
+2024-10-16 18:06:55,751 - INFO - [pid 11116] Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 18:06:55,800 - INFO - start load data
+2024-10-16 18:06:59,205 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 18:07:00,627 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 18:07:00,887 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 18:07:00,892 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 18:07:00,892 - INFO - [pid 11116] Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 18:07:00,894 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 18:07:00,894 - INFO - [pid 11116] Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 18:07:00,894 - ERROR - [pid 11116] Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 18:07:00,897 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 18:07:00,898 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 18:07:00,898 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 18:07:00,898 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 18:07:00,899 - INFO - [pid 11116] Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 18:07:00,899 - ERROR - [pid 11116] Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 18:07:00,900 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 18:07:00,901 - INFO - Worker Worker(salt=3392281113, workers=1, host=Rian, username=fachr, pid=11116) was stopped. Shutting down Keep-Alive thread
+2024-10-16 18:07:00,902 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+* 1 failed:
+    - 1 TransformTask(...)
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 18:07:16,673 - INFO - logging configured by default settings
+2024-10-16 18:07:16,681 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 18:07:16,681 - INFO - Done scheduling tasks
+2024-10-16 18:07:16,681 - INFO - Running Worker with 1 processes
+2024-10-16 18:07:16,682 - INFO - [pid 15872] Worker Worker(salt=7018839314, workers=1, host=Rian, username=fachr, pid=15872) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 18:07:16,724 - INFO - start transform data
+2024-10-16 18:07:42,201 - INFO - Table fact_order successfully inserted
+2024-10-16 18:15:06,508 - INFO - Table fact_order_items successfully inserted
+2024-10-16 18:15:06,763 - INFO - [pid 15872] Worker Worker(salt=7018839314, workers=1, host=Rian, username=fachr, pid=15872) done      TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 18:15:06,765 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 18:15:06,765 - INFO - Worker Worker(salt=7018839314, workers=1, host=Rian, username=fachr, pid=15872) was stopped. Shutting down Keep-Alive thread
+2024-10-16 18:15:06,766 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 ran successfully:
+    - 1 TransformTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 19:43:51,236 - INFO - logging configured by default settings
+2024-10-16 19:43:51,242 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 19:43:51,243 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 19:43:51,243 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 19:43:51,243 - INFO - Done scheduling tasks
+2024-10-16 19:43:51,243 - INFO - Running Worker with 1 processes
+2024-10-16 19:43:51,243 - INFO - [pid 27564] Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 19:43:51,291 - INFO - start load data
+2024-10-16 19:43:54,776 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 19:43:56,437 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 19:43:56,704 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 19:43:56,709 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 19:43:56,709 - INFO - [pid 27564] Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 19:43:56,710 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 19:43:56,711 - INFO - [pid 27564] Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 19:43:56,711 - ERROR - [pid 27564] Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 19:43:56,714 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 19:43:56,715 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 19:43:56,715 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 19:43:56,715 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 19:43:56,715 - INFO - [pid 27564] Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 19:43:56,716 - ERROR - [pid 27564] Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) failed    TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask___customers_sql____dim_customer_c_bb5e32e332
+2024-10-16 19:43:56,718 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   FAILED
+2024-10-16 19:43:56,718 - INFO - Worker Worker(salt=5076684536, workers=1, host=Rian, username=fachr, pid=27564) was stopped. Shutting down Keep-Alive thread
+2024-10-16 19:43:56,719 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+* 1 ran successfully:
+    - 1 LoadTask(...)
+* 1 failed:
+    - 1 TransformTask(...)
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:16:25,189 - INFO - logging configured by default settings
+2024-10-16 20:16:25,318 - WARNING - Will not run TransformTask() or any dependencies due to error in deps() method:
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 884, in _add
+    deps = task.deps()
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\task.py", line 685, in deps
+    return flatten(self._requires())
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\task.py", line 657, in _requires
+    return flatten(self.requires())  # base impl
+  File "C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\src\main_task.py", line 54, in requires
+    return LoadTask()
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\task_register.py", line 87, in __call__
+    param_values = cls.get_param_values(params, args, kwargs)
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\task.py", line 432, in get_param_values
+    raise parameter.MissingParameterException("%s: requires the '%s' parameter to be set" % (exc_desc, param_name))
+luigi.parameter.MissingParameterException: LoadTask[args=(), kwargs={}]: requires the 'extract_file_mapping' parameter to be set
+
+2024-10-16 20:16:25,320 - INFO - Informed scheduler that task   TransformTask__99914b932b   has status   UNKNOWN
+2024-10-16 20:16:25,320 - INFO - Done scheduling tasks
+2024-10-16 20:16:25,320 - INFO - Running Worker with 1 processes
+2024-10-16 20:16:25,321 - INFO - Worker Worker(salt=131709633, workers=1, host=Rian, username=fachr, pid=28100) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:16:25,321 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 failed scheduling:
+    - 1 TransformTask()
+
+Did not run any tasks
+This progress looks :( because there were tasks whose scheduling failed
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:17:53,535 - INFO - logging configured by default settings
+2024-10-16 20:17:53,543 - INFO - Informed scheduler that task   TransformTask__99914b932b   has status   PENDING
+2024-10-16 20:17:53,544 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:17:53,544 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:17:53,544 - INFO - Done scheduling tasks
+2024-10-16 20:17:53,544 - INFO - Running Worker with 1 processes
+2024-10-16 20:17:53,544 - INFO - [pid 24028] Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) running   LoadTask()
+2024-10-16 20:17:53,839 - INFO - start load data
+2024-10-16 20:17:57,193 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 20:17:58,767 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 20:17:59,044 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 20:17:59,049 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 20:17:59,049 - INFO - [pid 24028] Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) done      LoadTask()
+2024-10-16 20:17:59,051 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   DONE
+2024-10-16 20:17:59,052 - INFO - [pid 24028] Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) running   TransformTask()
+2024-10-16 20:17:59,052 - ERROR - [pid 24028] Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) failed    TransformTask()
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask__99914b932b
+2024-10-16 20:17:59,054 - INFO - Informed scheduler that task   TransformTask__99914b932b   has status   FAILED
+2024-10-16 20:17:59,054 - INFO - Informed scheduler that task   TransformTask__99914b932b   has status   PENDING
+2024-10-16 20:17:59,054 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:17:59,054 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:17:59,055 - INFO - [pid 24028] Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) running   TransformTask()
+2024-10-16 20:17:59,055 - ERROR - [pid 24028] Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) failed    TransformTask()
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask__99914b932b
+2024-10-16 20:17:59,057 - INFO - Informed scheduler that task   TransformTask__99914b932b   has status   FAILED
+2024-10-16 20:17:59,058 - INFO - Worker Worker(salt=4955129704, workers=1, host=Rian, username=fachr, pid=24028) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:17:59,058 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask()
+* 1 ran successfully:
+    - 1 LoadTask()
+* 1 failed:
+    - 1 TransformTask()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:18:47,857 - INFO - logging configured by default settings
+2024-10-16 20:18:47,866 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:18:47,866 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:18:47,866 - INFO - Done scheduling tasks
+2024-10-16 20:18:47,866 - INFO - Running Worker with 1 processes
+2024-10-16 20:18:47,866 - INFO - [pid 28280] Worker Worker(salt=9311971356, workers=1, host=Rian, username=fachr, pid=28280) running   LoadTask()
+2024-10-16 20:18:47,919 - INFO - start load data
+2024-10-16 20:18:51,340 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 20:18:53,127 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 20:18:53,402 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 20:18:53,409 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 20:18:53,409 - INFO - [pid 28280] Worker Worker(salt=9311971356, workers=1, host=Rian, username=fachr, pid=28280) done      LoadTask()
+2024-10-16 20:18:53,411 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   DONE
+2024-10-16 20:18:53,412 - INFO - Worker Worker(salt=9311971356, workers=1, host=Rian, username=fachr, pid=28280) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:18:53,412 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask()
+* 1 ran successfully:
+    - 1 LoadTask()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:19:00,597 - INFO - logging configured by default settings
+2024-10-16 20:19:00,604 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:19:00,604 - INFO - Done scheduling tasks
+2024-10-16 20:19:00,604 - INFO - Running Worker with 1 processes
+2024-10-16 20:19:00,604 - INFO - Worker Worker(salt=1971182564, workers=1, host=Rian, username=fachr, pid=12520) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:19:00,605 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask()
+
+Did not run any tasks
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:20:31,587 - INFO - logging configured by default settings
+2024-10-16 20:20:31,595 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   PENDING
+2024-10-16 20:20:31,595 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:20:31,596 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:20:31,596 - INFO - Done scheduling tasks
+2024-10-16 20:20:31,596 - INFO - Running Worker with 1 processes
+2024-10-16 20:20:31,596 - INFO - [pid 17600] Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) running   LoadTask()
+2024-10-16 20:20:31,645 - INFO - start load data
+2024-10-16 20:20:35,123 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 20:20:36,765 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 20:20:37,035 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 20:20:37,040 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 20:20:37,040 - INFO - [pid 17600] Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) done      LoadTask()
+2024-10-16 20:20:37,042 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   DONE
+2024-10-16 20:20:37,042 - INFO - [pid 17600] Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) running   TestTask()
+2024-10-16 20:20:37,042 - ERROR - [pid 17600] Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) failed    TestTask()
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask__99914b932b
+2024-10-16 20:20:37,044 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   FAILED
+2024-10-16 20:20:37,045 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   PENDING
+2024-10-16 20:20:37,045 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:20:37,045 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:20:37,045 - INFO - [pid 17600] Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) running   TestTask()
+2024-10-16 20:20:37,046 - ERROR - [pid 17600] Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) failed    TestTask()
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask__99914b932b
+2024-10-16 20:20:37,047 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   FAILED
+2024-10-16 20:20:37,047 - INFO - Worker Worker(salt=3599989174, workers=1, host=Rian, username=fachr, pid=17600) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:20:37,048 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask()
+* 1 ran successfully:
+    - 1 LoadTask()
+* 1 failed:
+    - 1 TestTask()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:21:13,061 - INFO - logging configured by default settings
+2024-10-16 20:21:13,068 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   PENDING
+2024-10-16 20:21:13,069 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:21:13,069 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:21:13,069 - INFO - Done scheduling tasks
+2024-10-16 20:21:13,069 - INFO - Running Worker with 1 processes
+2024-10-16 20:21:13,069 - INFO - [pid 13372] Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) running   LoadTask()
+2024-10-16 20:21:13,116 - INFO - start load data
+2024-10-16 20:21:16,584 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 20:21:18,142 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 20:21:18,416 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 20:21:18,421 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 20:21:18,421 - INFO - [pid 13372] Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) done      LoadTask()
+2024-10-16 20:21:18,422 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   DONE
+2024-10-16 20:21:18,422 - INFO - [pid 13372] Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) running   TestTask()
+2024-10-16 20:21:18,423 - ERROR - [pid 13372] Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) failed    TestTask()
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask__99914b932b
+2024-10-16 20:21:18,424 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   FAILED
+2024-10-16 20:21:18,425 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   PENDING
+2024-10-16 20:21:18,425 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   PENDING
+2024-10-16 20:21:18,426 - INFO - Informed scheduler that task   ExtractTask__99914b932b   has status   DONE
+2024-10-16 20:21:18,426 - INFO - [pid 13372] Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) running   TestTask()
+2024-10-16 20:21:18,426 - ERROR - [pid 13372] Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) failed    TestTask()
+Traceback (most recent call last):
+  File "C:\Users\fachr\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\luigi\worker.py", line 195, in run
+    raise RuntimeError('Unfulfilled %s at run time: %s' % (deps, ', '.join(missing)))
+RuntimeError: Unfulfilled dependency at run time: LoadTask__99914b932b
+2024-10-16 20:21:18,429 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   FAILED
+2024-10-16 20:21:18,429 - INFO - Worker Worker(salt=9792457123, workers=1, host=Rian, username=fachr, pid=13372) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:21:18,430 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 1 complete ones were encountered:
+    - 1 ExtractTask()
+* 1 ran successfully:
+    - 1 LoadTask()
+* 1 failed:
+    - 1 TestTask()
+
+This progress looks :( because there were failed tasks
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:22:51,316 - INFO - logging configured by default settings
+2024-10-16 20:22:51,323 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   PENDING
+2024-10-16 20:22:51,323 - INFO - Informed scheduler that task   LoadTask__99914b932b   has status   DONE
+2024-10-16 20:22:51,323 - INFO - Done scheduling tasks
+2024-10-16 20:22:51,323 - INFO - Running Worker with 1 processes
+2024-10-16 20:22:51,323 - INFO - [pid 27572] Worker Worker(salt=7709562458, workers=1, host=Rian, username=fachr, pid=27572) running   TestTask()
+2024-10-16 20:22:51,382 - INFO - start transform data
+2024-10-16 20:23:30,779 - INFO - Table fact_order successfully inserted
+2024-10-16 20:26:54,071 - ERROR - Error insert to database: Can't reconnect until invalid transaction is rolled back.  Please rollback() fully before proceeding (Background on this error at: https://sqlalche.me/e/20/8s2b)
+2024-10-16 20:26:54,071 - INFO - [pid 27572] Worker Worker(salt=7709562458, workers=1, host=Rian, username=fachr, pid=27572) done      TestTask()
+2024-10-16 20:26:54,075 - INFO - Informed scheduler that task   TestTask__99914b932b   has status   DONE
+2024-10-16 20:26:54,075 - INFO - Worker Worker(salt=7709562458, workers=1, host=Rian, username=fachr, pid=27572) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:26:54,076 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 LoadTask()
+* 1 ran successfully:
+    - 1 TestTask()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:28:28,741 - INFO - logging configured by default settings
+2024-10-16 20:28:28,750 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 20:28:28,750 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 20:28:28,750 - INFO - Done scheduling tasks
+2024-10-16 20:28:28,750 - INFO - Running Worker with 1 processes
+2024-10-16 20:28:28,750 - INFO - [pid 25848] Worker Worker(salt=4383758839, workers=1, host=Rian, username=fachr, pid=25848) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 20:28:28,838 - INFO - start transform data
+2024-10-16 20:28:29,229 - INFO - Table fact_order successfully inserted
+2024-10-16 20:28:29,804 - INFO - Table fact_order_items successfully inserted
+2024-10-16 20:28:29,827 - INFO - [pid 25848] Worker Worker(salt=4383758839, workers=1, host=Rian, username=fachr, pid=25848) done      TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 20:28:29,829 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 20:28:29,829 - INFO - Worker Worker(salt=4383758839, workers=1, host=Rian, username=fachr, pid=25848) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:28:29,830 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 LoadTask(...)
+* 1 ran successfully:
+    - 1 TransformTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 20:29:38,615 - INFO - logging configured by default settings
+2024-10-16 20:29:38,622 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 20:29:38,622 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   PENDING
+2024-10-16 20:29:38,622 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   PENDING
+2024-10-16 20:29:38,622 - INFO - Done scheduling tasks
+2024-10-16 20:29:38,622 - INFO - Running Worker with 1 processes
+2024-10-16 20:29:38,622 - INFO - [pid 20064] Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) running   ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 20:29:38,687 - INFO - start extract data
+2024-10-16 20:29:38,688 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 20:29:39,153 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv
+2024-10-16 20:29:39,154 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 20:29:39,526 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv
+2024-10-16 20:29:39,527 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 20:29:39,543 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv
+2024-10-16 20:29:39,544 - INFO - [pid 20064] Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) done      ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 20:29:39,545 - INFO - Informed scheduler that task   ExtractTask___customers_sql__fb9981e672   has status   DONE
+2024-10-16 20:29:39,546 - INFO - [pid 20064] Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) running   LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 20:29:39,546 - INFO - start load data
+2024-10-16 20:29:42,884 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 20:29:44,332 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 20:29:44,596 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 20:29:44,601 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-16 20:29:44,601 - INFO - [pid 20064] Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) done      LoadTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 20:29:44,602 - INFO - Informed scheduler that task   LoadTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 20:29:44,603 - INFO - [pid 20064] Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) running   TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 20:29:44,603 - INFO - start transform data
+2024-10-16 20:29:51,601 - INFO - Table fact_order successfully inserted
+2024-10-16 20:29:59,855 - INFO - Table fact_order_items successfully inserted
+2024-10-16 20:29:59,911 - INFO - [pid 20064] Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) done      TransformTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"}, load_file_mapping={"dim_customer.csv": "dim_customer", "dim_product.csv": "dim_product", "dim_seller.csv": "dim_seller"})
+2024-10-16 20:29:59,913 - INFO - Informed scheduler that task   TransformTask___customers_sql____dim_customer_c_bb5e32e332   has status   DONE
+2024-10-16 20:29:59,913 - INFO - Worker Worker(salt=4889375309, workers=1, host=Rian, username=fachr, pid=20064) was stopped. Shutting down Keep-Alive thread
+2024-10-16 20:29:59,914 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 3 ran successfully:
+    - 1 ExtractTask(extract_file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+    - 1 LoadTask(...)
+    - 1 TransformTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
