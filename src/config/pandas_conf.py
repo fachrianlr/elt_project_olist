@@ -24,7 +24,7 @@ def csv_to_sql(engine, csv_file, table_name):
         logger.error(f"Error insert to database: {e}")
 
 
-def save_to_csv(df, file_path, index=False, header=False):
+def save_to_csv(df, file_path):
     try:
         df.to_csv(file_path, index=False)
         logger.info(f"Data successfully saved to {file_path}")
