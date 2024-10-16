@@ -1,7 +1,7 @@
 
 from sqlalchemy import create_engine
 
-from config.logging_conf import logger
+from src.config.logging_conf import logger
 
 
 def connect_to_db(db_uri):

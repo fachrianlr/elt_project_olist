@@ -4,3 +4,662 @@
 2024-10-16 07:58:18,656 - ERROR - Error saving data to CSV: 'NoneType' object has no attribute 'to_csv'
 2024-10-16 07:58:18,672 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
 2024-10-16 07:58:18,672 - INFO - successfully extracted data
+2024-10-16 08:26:40,063 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:26:40,411 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:26:40,426 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:26:40,426 - INFO - successfully extracted data
+2024-10-16 08:30:23,304 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:30:23,669 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:30:23,687 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:30:23,687 - INFO - successfully extracted data
+2024-10-16 08:38:17,470 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:38:17,827 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:38:17,848 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:38:17,849 - INFO - successfully extracted data
+2024-10-16 08:39:48,990 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:39:49,316 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:39:49,335 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:39:49,335 - INFO - successfully extracted data
+2024-10-16 08:40:14,747 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:40:15,073 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:40:15,090 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:40:15,091 - INFO - successfully extracted data
+2024-10-16 08:44:51,912 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:44:52,281 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:44:52,304 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:44:52,304 - INFO - successfully extracted data
+2024-10-16 08:47:38,865 - INFO -  filename : customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:47:39,317 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:47:39,317 - INFO -  filename : products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:47:39,674 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:47:39,674 - INFO -  filename : sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:47:39,688 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:47:39,689 - INFO - successfully extracted data
+2024-10-16 08:48:06,934 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:48:07,441 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:48:07,441 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:48:07,791 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:48:07,793 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:48:07,811 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:48:07,811 - INFO - successfully extracted data
+2024-10-16 08:48:24,701 - INFO -  file : customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:48:25,165 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:48:25,165 - INFO -  file : products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:48:25,526 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:48:25,526 - INFO -  file : sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:48:25,544 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:48:25,544 - INFO - successfully extracted data
+2024-10-16 08:48:54,202 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:48:54,688 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:48:54,689 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:48:55,055 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:48:55,055 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:48:55,073 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:48:55,073 - INFO - successfully extracted data
+2024-10-16 08:49:13,747 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:49:14,218 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:49:14,218 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:49:14,561 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:49:14,561 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data/sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:49:14,578 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:49:14,578 - INFO - successfully extracted data
+2024-10-16 08:49:34,269 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:49:34,996 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:49:34,996 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:49:35,353 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:49:35,354 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:49:35,371 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:49:35,371 - INFO - successfully extracted data
+2024-10-16 08:53:48,853 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 08:53:49,326 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 08:53:49,326 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 08:53:49,686 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 08:53:49,687 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 08:53:49,703 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 08:53:49,703 - INFO - successfully extracted data
+2024-10-16 09:01:46,639 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 09:01:47,095 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 09:01:47,096 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 09:01:47,411 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 09:01:47,411 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 09:01:47,427 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 09:01:47,427 - INFO - successfully extracted data
+2024-10-16 09:01:50,703 - ERROR - Error connecting to the database: Expected string or URL object, got None
+2024-10-16 09:01:50,703 - ERROR - Could not connect to the database
+2024-10-16 09:15:03,493 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 09:15:03,951 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 09:15:03,951 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 09:15:04,279 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 09:15:04,279 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 09:15:04,295 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 09:15:04,295 - INFO - successfully extracted data
+2024-10-16 09:16:26,285 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 09:16:26,774 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\customers.csv
+2024-10-16 09:16:26,774 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 09:16:27,115 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\products.csv
+2024-10-16 09:16:27,115 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 09:16:27,133 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\source\sellers.csv
+2024-10-16 09:16:27,133 - INFO - successfully extracted data
+2024-10-16 10:05:10,129 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:05:10,551 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\customers.csv
+2024-10-16 10:05:10,551 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:05:10,864 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\products.csv
+2024-10-16 10:05:10,864 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:05:10,879 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\sellers.csv
+2024-10-16 10:05:10,880 - INFO - successfully extracted data
+2024-10-16 10:05:20,414 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, sql : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:05:20,813 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\customers.csv
+2024-10-16 10:05:20,813 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, sql : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:05:21,132 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\products.csv
+2024-10-16 10:05:21,132 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, sql : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:05:21,148 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\sellers.csv
+2024-10-16 10:05:21,148 - INFO - successfully extracted data
+2024-10-16 10:17:05,903 - INFO - start extracted data
+2024-10-16 10:17:05,903 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:17:06,291 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:17:06,292 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:17:06,619 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:17:06,619 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:17:06,634 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:17:06,634 - INFO - successfully extracted all data
+2024-10-16 10:18:33,719 - INFO - start extract data
+2024-10-16 10:18:33,719 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:18:34,113 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:18:34,114 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:18:34,431 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:18:34,432 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:18:34,451 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:18:34,451 - INFO - successfully extracted all data
+2024-10-16 10:28:11,270 - INFO - start extract data
+2024-10-16 10:28:11,270 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:28:11,731 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:28:11,732 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:28:12,032 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:28:12,032 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:28:12,049 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:28:12,049 - INFO - successfully extracted all data
+2024-10-16 10:30:07,619 - INFO - successfully loaded data
+2024-10-16 10:33:05,870 - INFO - start load data
+2024-10-16 10:33:08,921 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer
+2024-10-16 10:33:08,925 - INFO - successfully loaded data
+2024-10-16 10:35:09,201 - INFO - start load data
+2024-10-16 10:35:12,086 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer
+2024-10-16 10:35:12,291 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv, Table Name: dim_seller
+2024-10-16 10:35:12,510 - ERROR - Error insert to database: (psycopg2.errors.UndefinedColumn) column "product_name_lenght" of relation "dim_product" does not exist
+LINE 1: ...O dim_product (product_id, product_category_name, product_na...
+                                                             ^
+
+[SQL: INSERT INTO dim_product (product_id, product_category_name, product_name_lenght, product_description_lenght, product_photos_qty, product_weight_g, product_length_cm, product_height_cm, product_width_cm) VALUES (%(product_id__0)s, %(product_category_n ... 259868 characters truncated ... _weight_g__999)s, %(product_length_cm__999)s, %(product_height_cm__999)s, %(product_width_cm__999)s)]
+[parameters: {'product_description_lenght__0': 287.0, 'product_height_cm__0': 10.0, 'product_width_cm__0': 14.0, 'product_name_lenght__0': 40.0, 'product_length_cm__0': 16.0, 'product_category_name__0': 'perfumaria', 'product_id__0': '1e9e8ef04dbcff4541ed26657ea517e5', 'product_photos_qty__0': 1.0, 'product_weight_g__0': 225.0, 'product_description_lenght__1': 276.0, 'product_height_cm__1': 18.0, 'product_width_cm__1': 20.0, 'product_name_lenght__1': 44.0, 'product_length_cm__1': 30.0, 'product_category_name__1': 'artes', 'product_id__1': '3aa071139cb16b67ca9e5dea641aaa2f', 'product_photos_qty__1': 1.0, 'product_weight_g__1': 1000.0, 'product_description_lenght__2': 250.0, 'product_height_cm__2': 9.0, 'product_width_cm__2': 15.0, 'product_name_lenght__2': 46.0, 'product_length_cm__2': 18.0, 'product_category_name__2': 'esporte_lazer', 'product_id__2': '96bd76ec8810374ed1b65e291975717f', 'product_photos_qty__2': 1.0, 'product_weight_g__2': 154.0, 'product_description_lenght__3': 261.0, 'product_height_cm__3': 4.0, 'product_width_cm__3': 26.0, 'product_name_lenght__3': 27.0, 'product_length_cm__3': 26.0, 'product_category_name__3': 'bebes', 'product_id__3': 'cef67bcfe19066a932b7673e239eb23d', 'product_photos_qty__3': 1.0, 'product_weight_g__3': 371.0, 'product_description_lenght__4': 402.0, 'product_height_cm__4': 17.0, 'product_width_cm__4': 13.0, 'product_name_lenght__4': 37.0, 'product_length_cm__4': 20.0, 'product_category_name__4': 'utilidades_domesticas', 'product_id__4': '9dc1a7de274444849c219cff195d0b71', 'product_photos_qty__4': 4.0, 'product_weight_g__4': 625.0, 'product_description_lenght__5': 745.0, 'product_height_cm__5': 5.0, 'product_width_cm__5': 11.0, 'product_name_lenght__5': 60.0, 'product_length_cm__5': 38.0 ... 8900 parameters truncated ... 'product_length_cm__994': 48.0, 'product_category_name__994': 'cama_mesa_banho', 'product_id__994': 'a93ad122024312ca432da7f7b32474b4', 'product_photos_qty__994': 1.0, 'product_weight_g__994': 1588.0, 'product_description_lenght__995': 287.0, 'product_height_cm__995': 16.0, 'product_width_cm__995': 22.0, 'product_name_lenght__995': 40.0, 'product_length_cm__995': 20.0, 'product_category_name__995': 'pet_shop', 'product_id__995': '98bf9f3941be6afbca9ea37f8eb0c466', 'product_photos_qty__995': 6.0, 'product_weight_g__995': 1400.0, 'product_description_lenght__996': 797.0, 'product_height_cm__996': 7.0, 'product_width_cm__996': 38.0, 'product_name_lenght__996': 58.0, 'product_length_cm__996': 23.0, 'product_category_name__996': 'automotivo', 'product_id__996': '1fd95182c672cf5b10c82207ca5dab97', 'product_photos_qty__996': 5.0, 'product_weight_g__996': 1100.0, 'product_description_lenght__997': 250.0, 'product_height_cm__997': 6.0, 'product_width_cm__997': 28.0, 'product_name_lenght__997': 29.0, 'product_length_cm__997': 32.0, 'product_category_name__997': 'moveis_decoracao', 'product_id__997': 'ac01b71ddb644fe8806e71a6030accf9', 'product_photos_qty__997': 2.0, 'product_weight_g__997': 800.0, 'product_description_lenght__998': 1134.0, 'product_height_cm__998': 15.0, 'product_width_cm__998': 18.0, 'product_name_lenght__998': 45.0, 'product_length_cm__998': 26.0, 'product_category_name__998': 'esporte_lazer', 'product_id__998': '35e26f65c3f380cfe6257d771fb067d2', 'product_photos_qty__998': 1.0, 'product_weight_g__998': 867.0, 'product_description_lenght__999': 999.0, 'product_height_cm__999': 5.0, 'product_width_cm__999': 20.0, 'product_name_lenght__999': 32.0, 'product_length_cm__999': 17.0, 'product_category_name__999': 'informatica_acessorios', 'product_id__999': '089cc17c8bf2226d13648392e33dabd7', 'product_photos_qty__999': 3.0, 'product_weight_g__999': 225.0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-16 10:35:12,512 - INFO - successfully loaded data
+2024-10-16 10:43:14,217 - INFO - start load data
+2024-10-16 10:43:17,292 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer
+2024-10-16 10:43:17,499 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv, Table Name: dim_seller
+2024-10-16 10:43:17,725 - ERROR - Error insert to database: (psycopg2.errors.UndefinedColumn) column "product_name_lenght" of relation "dim_product" does not exist
+LINE 1: ...O dim_product (product_id, product_category_name, product_na...
+                                                             ^
+
+[SQL: INSERT INTO dim_product (product_id, product_category_name, product_name_lenght, product_description_lenght, product_photos_qty, product_weight_g, product_length_cm, product_height_cm, product_width_cm) VALUES (%(product_id__0)s, %(product_category_n ... 259868 characters truncated ... _weight_g__999)s, %(product_length_cm__999)s, %(product_height_cm__999)s, %(product_width_cm__999)s)]
+[parameters: {'product_id__0': '1e9e8ef04dbcff4541ed26657ea517e5', 'product_description_lenght__0': 287.0, 'product_name_lenght__0': 40.0, 'product_category_name__0': 'perfumaria', 'product_photos_qty__0': 1.0, 'product_length_cm__0': 16.0, 'product_height_cm__0': 10.0, 'product_width_cm__0': 14.0, 'product_weight_g__0': 225.0, 'product_id__1': '3aa071139cb16b67ca9e5dea641aaa2f', 'product_description_lenght__1': 276.0, 'product_name_lenght__1': 44.0, 'product_category_name__1': 'artes', 'product_photos_qty__1': 1.0, 'product_length_cm__1': 30.0, 'product_height_cm__1': 18.0, 'product_width_cm__1': 20.0, 'product_weight_g__1': 1000.0, 'product_id__2': '96bd76ec8810374ed1b65e291975717f', 'product_description_lenght__2': 250.0, 'product_name_lenght__2': 46.0, 'product_category_name__2': 'esporte_lazer', 'product_photos_qty__2': 1.0, 'product_length_cm__2': 18.0, 'product_height_cm__2': 9.0, 'product_width_cm__2': 15.0, 'product_weight_g__2': 154.0, 'product_id__3': 'cef67bcfe19066a932b7673e239eb23d', 'product_description_lenght__3': 261.0, 'product_name_lenght__3': 27.0, 'product_category_name__3': 'bebes', 'product_photos_qty__3': 1.0, 'product_length_cm__3': 26.0, 'product_height_cm__3': 4.0, 'product_width_cm__3': 26.0, 'product_weight_g__3': 371.0, 'product_id__4': '9dc1a7de274444849c219cff195d0b71', 'product_description_lenght__4': 402.0, 'product_name_lenght__4': 37.0, 'product_category_name__4': 'utilidades_domesticas', 'product_photos_qty__4': 4.0, 'product_length_cm__4': 20.0, 'product_height_cm__4': 17.0, 'product_width_cm__4': 13.0, 'product_weight_g__4': 625.0, 'product_id__5': '41d3672d4792049fa1779bb35283ed13', 'product_description_lenght__5': 745.0, 'product_name_lenght__5': 60.0, 'product_category_name__5': 'instrumentos_musicais', 'product_photos_qty__5': 1.0 ... 8900 parameters truncated ... 'product_photos_qty__994': 1.0, 'product_length_cm__994': 48.0, 'product_height_cm__994': 12.0, 'product_width_cm__994': 44.0, 'product_weight_g__994': 1588.0, 'product_id__995': '98bf9f3941be6afbca9ea37f8eb0c466', 'product_description_lenght__995': 287.0, 'product_name_lenght__995': 40.0, 'product_category_name__995': 'pet_shop', 'product_photos_qty__995': 6.0, 'product_length_cm__995': 20.0, 'product_height_cm__995': 16.0, 'product_width_cm__995': 22.0, 'product_weight_g__995': 1400.0, 'product_id__996': '1fd95182c672cf5b10c82207ca5dab97', 'product_description_lenght__996': 797.0, 'product_name_lenght__996': 58.0, 'product_category_name__996': 'automotivo', 'product_photos_qty__996': 5.0, 'product_length_cm__996': 23.0, 'product_height_cm__996': 7.0, 'product_width_cm__996': 38.0, 'product_weight_g__996': 1100.0, 'product_id__997': 'ac01b71ddb644fe8806e71a6030accf9', 'product_description_lenght__997': 250.0, 'product_name_lenght__997': 29.0, 'product_category_name__997': 'moveis_decoracao', 'product_photos_qty__997': 2.0, 'product_length_cm__997': 32.0, 'product_height_cm__997': 6.0, 'product_width_cm__997': 28.0, 'product_weight_g__997': 800.0, 'product_id__998': '35e26f65c3f380cfe6257d771fb067d2', 'product_description_lenght__998': 1134.0, 'product_name_lenght__998': 45.0, 'product_category_name__998': 'esporte_lazer', 'product_photos_qty__998': 1.0, 'product_length_cm__998': 26.0, 'product_height_cm__998': 15.0, 'product_width_cm__998': 18.0, 'product_weight_g__998': 867.0, 'product_id__999': '089cc17c8bf2226d13648392e33dabd7', 'product_description_lenght__999': 999.0, 'product_name_lenght__999': 32.0, 'product_category_name__999': 'informatica_acessorios', 'product_photos_qty__999': 3.0, 'product_length_cm__999': 17.0, 'product_height_cm__999': 5.0, 'product_width_cm__999': 20.0, 'product_weight_g__999': 225.0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-16 10:43:17,728 - INFO - successfully loaded data
+2024-10-16 10:46:57,230 - INFO - start load data
+2024-10-16 10:47:00,320 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer
+2024-10-16 10:47:00,520 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv, Table Name: dim_seller
+2024-10-16 10:47:00,742 - ERROR - Error insert to database: (psycopg2.errors.UndefinedColumn) column "product_name_lenght" of relation "dim_product" does not exist
+LINE 1: ...O dim_product (product_id, product_category_name, product_na...
+                                                             ^
+
+[SQL: INSERT INTO dim_product (product_id, product_category_name, product_name_lenght, product_description_lenght, product_photos_qty, product_weight_g, product_length_cm, product_height_cm, product_width_cm) VALUES (%(product_id__0)s, %(product_category_n ... 259868 characters truncated ... _weight_g__999)s, %(product_length_cm__999)s, %(product_height_cm__999)s, %(product_width_cm__999)s)]
+[parameters: {'product_length_cm__0': 16.0, 'product_category_name__0': 'perfumaria', 'product_id__0': '1e9e8ef04dbcff4541ed26657ea517e5', 'product_weight_g__0': 225.0, 'product_width_cm__0': 14.0, 'product_photos_qty__0': 1.0, 'product_height_cm__0': 10.0, 'product_name_lenght__0': 40.0, 'product_description_lenght__0': 287.0, 'product_length_cm__1': 30.0, 'product_category_name__1': 'artes', 'product_id__1': '3aa071139cb16b67ca9e5dea641aaa2f', 'product_weight_g__1': 1000.0, 'product_width_cm__1': 20.0, 'product_photos_qty__1': 1.0, 'product_height_cm__1': 18.0, 'product_name_lenght__1': 44.0, 'product_description_lenght__1': 276.0, 'product_length_cm__2': 18.0, 'product_category_name__2': 'esporte_lazer', 'product_id__2': '96bd76ec8810374ed1b65e291975717f', 'product_weight_g__2': 154.0, 'product_width_cm__2': 15.0, 'product_photos_qty__2': 1.0, 'product_height_cm__2': 9.0, 'product_name_lenght__2': 46.0, 'product_description_lenght__2': 250.0, 'product_length_cm__3': 26.0, 'product_category_name__3': 'bebes', 'product_id__3': 'cef67bcfe19066a932b7673e239eb23d', 'product_weight_g__3': 371.0, 'product_width_cm__3': 26.0, 'product_photos_qty__3': 1.0, 'product_height_cm__3': 4.0, 'product_name_lenght__3': 27.0, 'product_description_lenght__3': 261.0, 'product_length_cm__4': 20.0, 'product_category_name__4': 'utilidades_domesticas', 'product_id__4': '9dc1a7de274444849c219cff195d0b71', 'product_weight_g__4': 625.0, 'product_width_cm__4': 13.0, 'product_photos_qty__4': 4.0, 'product_height_cm__4': 17.0, 'product_name_lenght__4': 37.0, 'product_description_lenght__4': 402.0, 'product_length_cm__5': 38.0, 'product_category_name__5': 'instrumentos_musicais', 'product_id__5': '41d3672d4792049fa1779bb35283ed13', 'product_weight_g__5': 200.0, 'product_width_cm__5': 11.0 ... 8900 parameters truncated ... 'product_width_cm__994': 44.0, 'product_photos_qty__994': 1.0, 'product_height_cm__994': 12.0, 'product_name_lenght__994': 48.0, 'product_description_lenght__994': 267.0, 'product_length_cm__995': 20.0, 'product_category_name__995': 'pet_shop', 'product_id__995': '98bf9f3941be6afbca9ea37f8eb0c466', 'product_weight_g__995': 1400.0, 'product_width_cm__995': 22.0, 'product_photos_qty__995': 6.0, 'product_height_cm__995': 16.0, 'product_name_lenght__995': 40.0, 'product_description_lenght__995': 287.0, 'product_length_cm__996': 23.0, 'product_category_name__996': 'automotivo', 'product_id__996': '1fd95182c672cf5b10c82207ca5dab97', 'product_weight_g__996': 1100.0, 'product_width_cm__996': 38.0, 'product_photos_qty__996': 5.0, 'product_height_cm__996': 7.0, 'product_name_lenght__996': 58.0, 'product_description_lenght__996': 797.0, 'product_length_cm__997': 32.0, 'product_category_name__997': 'moveis_decoracao', 'product_id__997': 'ac01b71ddb644fe8806e71a6030accf9', 'product_weight_g__997': 800.0, 'product_width_cm__997': 28.0, 'product_photos_qty__997': 2.0, 'product_height_cm__997': 6.0, 'product_name_lenght__997': 29.0, 'product_description_lenght__997': 250.0, 'product_length_cm__998': 26.0, 'product_category_name__998': 'esporte_lazer', 'product_id__998': '35e26f65c3f380cfe6257d771fb067d2', 'product_weight_g__998': 867.0, 'product_width_cm__998': 18.0, 'product_photos_qty__998': 1.0, 'product_height_cm__998': 15.0, 'product_name_lenght__998': 45.0, 'product_description_lenght__998': 1134.0, 'product_length_cm__999': 17.0, 'product_category_name__999': 'informatica_acessorios', 'product_id__999': '089cc17c8bf2226d13648392e33dabd7', 'product_weight_g__999': 225.0, 'product_width_cm__999': 20.0, 'product_photos_qty__999': 3.0, 'product_height_cm__999': 5.0, 'product_name_lenght__999': 32.0, 'product_description_lenght__999': 999.0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-16 10:47:00,745 - INFO - successfully loaded data
+2024-10-16 10:48:44,819 - INFO - start extract data
+2024-10-16 10:48:44,819 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:48:45,238 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:48:45,239 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products;
+2024-10-16 10:48:45,561 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:48:45,561 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:48:45,576 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:48:45,577 - INFO - successfully extracted all data
+2024-10-16 10:48:49,930 - INFO - start load data
+2024-10-16 10:48:52,981 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer
+2024-10-16 10:48:53,196 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv, Table Name: dim_seller
+2024-10-16 10:48:53,447 - ERROR - Error insert to database: (psycopg2.errors.UndefinedColumn) column "product_description_lenght" of relation "dim_product" does not exist
+LINE 1: ...t_id, product_category_name, product_name_length, product_de...
+                                                             ^
+
+[SQL: INSERT INTO dim_product (product_id, product_category_name, product_name_length, product_description_lenght, product_photos_qty, product_weight_g, product_length_cm, product_height_cm, product_width_cm) VALUES (%(product_id__0)s, %(product_category_n ... 259868 characters truncated ... _weight_g__999)s, %(product_length_cm__999)s, %(product_height_cm__999)s, %(product_width_cm__999)s)]
+[parameters: {'product_category_name__0': 'perfumaria', 'product_height_cm__0': 10.0, 'product_id__0': '1e9e8ef04dbcff4541ed26657ea517e5', 'product_weight_g__0': 225.0, 'product_name_length__0': 40.0, 'product_width_cm__0': 14.0, 'product_photos_qty__0': 1.0, 'product_length_cm__0': 16.0, 'product_description_lenght__0': 287.0, 'product_category_name__1': 'artes', 'product_height_cm__1': 18.0, 'product_id__1': '3aa071139cb16b67ca9e5dea641aaa2f', 'product_weight_g__1': 1000.0, 'product_name_length__1': 44.0, 'product_width_cm__1': 20.0, 'product_photos_qty__1': 1.0, 'product_length_cm__1': 30.0, 'product_description_lenght__1': 276.0, 'product_category_name__2': 'esporte_lazer', 'product_height_cm__2': 9.0, 'product_id__2': '96bd76ec8810374ed1b65e291975717f', 'product_weight_g__2': 154.0, 'product_name_length__2': 46.0, 'product_width_cm__2': 15.0, 'product_photos_qty__2': 1.0, 'product_length_cm__2': 18.0, 'product_description_lenght__2': 250.0, 'product_category_name__3': 'bebes', 'product_height_cm__3': 4.0, 'product_id__3': 'cef67bcfe19066a932b7673e239eb23d', 'product_weight_g__3': 371.0, 'product_name_length__3': 27.0, 'product_width_cm__3': 26.0, 'product_photos_qty__3': 1.0, 'product_length_cm__3': 26.0, 'product_description_lenght__3': 261.0, 'product_category_name__4': 'utilidades_domesticas', 'product_height_cm__4': 17.0, 'product_id__4': '9dc1a7de274444849c219cff195d0b71', 'product_weight_g__4': 625.0, 'product_name_length__4': 37.0, 'product_width_cm__4': 13.0, 'product_photos_qty__4': 4.0, 'product_length_cm__4': 20.0, 'product_description_lenght__4': 402.0, 'product_category_name__5': 'instrumentos_musicais', 'product_height_cm__5': 5.0, 'product_id__5': '41d3672d4792049fa1779bb35283ed13', 'product_weight_g__5': 200.0, 'product_name_length__5': 60.0 ... 8900 parameters truncated ... 'product_name_length__994': 48.0, 'product_width_cm__994': 44.0, 'product_photos_qty__994': 1.0, 'product_length_cm__994': 48.0, 'product_description_lenght__994': 267.0, 'product_category_name__995': 'pet_shop', 'product_height_cm__995': 16.0, 'product_id__995': '98bf9f3941be6afbca9ea37f8eb0c466', 'product_weight_g__995': 1400.0, 'product_name_length__995': 40.0, 'product_width_cm__995': 22.0, 'product_photos_qty__995': 6.0, 'product_length_cm__995': 20.0, 'product_description_lenght__995': 287.0, 'product_category_name__996': 'automotivo', 'product_height_cm__996': 7.0, 'product_id__996': '1fd95182c672cf5b10c82207ca5dab97', 'product_weight_g__996': 1100.0, 'product_name_length__996': 58.0, 'product_width_cm__996': 38.0, 'product_photos_qty__996': 5.0, 'product_length_cm__996': 23.0, 'product_description_lenght__996': 797.0, 'product_category_name__997': 'moveis_decoracao', 'product_height_cm__997': 6.0, 'product_id__997': 'ac01b71ddb644fe8806e71a6030accf9', 'product_weight_g__997': 800.0, 'product_name_length__997': 29.0, 'product_width_cm__997': 28.0, 'product_photos_qty__997': 2.0, 'product_length_cm__997': 32.0, 'product_description_lenght__997': 250.0, 'product_category_name__998': 'esporte_lazer', 'product_height_cm__998': 15.0, 'product_id__998': '35e26f65c3f380cfe6257d771fb067d2', 'product_weight_g__998': 867.0, 'product_name_length__998': 45.0, 'product_width_cm__998': 18.0, 'product_photos_qty__998': 1.0, 'product_length_cm__998': 26.0, 'product_description_lenght__998': 1134.0, 'product_category_name__999': 'informatica_acessorios', 'product_height_cm__999': 5.0, 'product_id__999': '089cc17c8bf2226d13648392e33dabd7', 'product_weight_g__999': 225.0, 'product_name_length__999': 32.0, 'product_width_cm__999': 20.0, 'product_photos_qty__999': 3.0, 'product_length_cm__999': 17.0, 'product_description_lenght__999': 999.0}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-16 10:48:53,449 - INFO - successfully loaded data
+2024-10-16 10:49:16,332 - INFO - start extract data
+2024-10-16 10:49:16,332 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:49:16,726 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:49:16,726 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products;
+2024-10-16 10:49:17,017 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:49:17,017 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:49:17,035 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:49:17,035 - INFO - successfully extracted all data
+2024-10-16 10:50:10,374 - INFO - start extract data
+2024-10-16 10:50:10,374 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id
+FROM customers
+2024-10-16 10:50:10,584 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:50:10,585 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products;
+2024-10-16 10:50:10,881 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:50:10,881 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:50:10,900 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:50:10,900 - INFO - successfully extracted all data
+2024-10-16 10:50:55,552 - INFO - start extract data
+2024-10-16 10:50:55,553 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:50:55,955 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:50:55,955 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:50:56,252 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:50:56,252 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:50:56,267 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:50:56,267 - INFO - successfully extracted all data
+2024-10-16 10:51:40,536 - INFO - start extract data
+2024-10-16 10:51:40,536 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:51:40,956 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:51:40,957 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:51:40,961 - ERROR - Error querying the database: (psycopg2.errors.SyntaxError) syntax error at or near "product_description_length"
+LINE 4:        product_description_lenght AS AS product_description_...
+                                                ^
+
+[SQL: SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-10-16 10:51:40,969 - ERROR - Error saving data to CSV: 'NoneType' object has no attribute 'to_csv'
+2024-10-16 10:51:40,969 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:51:40,980 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:51:40,980 - INFO - successfully extracted all data
+2024-10-16 10:52:07,549 - INFO - start extract data
+2024-10-16 10:52:07,549 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:52:07,980 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:52:07,981 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:52:08,281 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:52:08,281 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:52:08,297 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:52:08,297 - INFO - successfully extracted all data
+2024-10-16 10:52:29,795 - INFO - start extract data
+2024-10-16 10:52:29,796 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 10:52:30,202 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 10:52:30,203 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 10:52:30,503 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 10:52:30,503 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 10:52:30,518 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 10:52:51,888 - INFO - start load data
+2024-10-16 10:52:55,153 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer
+2024-10-16 10:52:55,365 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv, Table Name: dim_seller
+2024-10-16 10:52:56,620 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv, Table Name: dim_product
+2024-10-16 10:52:56,621 - INFO - successfully loaded data
+2024-10-16 10:53:55,472 - INFO - start load data
+2024-10-16 10:53:58,549 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv, Table Name: dim_customer Successfully Inserted
+2024-10-16 10:53:58,753 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv, Table Name: dim_seller Successfully Inserted
+2024-10-16 10:54:00,145 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv, Table Name: dim_product Successfully Inserted
+2024-10-16 10:54:00,145 - INFO - successfully loaded data
+2024-10-16 11:29:58,690 - INFO - start extract data
+2024-10-16 11:29:58,690 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 11:29:59,112 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 11:29:59,113 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 11:29:59,427 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 11:29:59,428 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 11:29:59,443 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 11:34:47,334 - INFO - logging configured by default settings
+2024-10-16 11:34:47,396 - INFO - Informed scheduler that task   ExtractTask___customers_sql__e99b79bf4f   has status   PENDING
+2024-10-16 11:34:47,396 - INFO - Done scheduling tasks
+2024-10-16 11:34:47,396 - INFO - Running Worker with 1 processes
+2024-10-16 11:34:47,396 - INFO - [pid 10864] Worker Worker(salt=9006325567, workers=1, host=Rian, username=fachr, pid=10864) running   ExtractTask(file_mapping={'customers.sql': 'dim_customer.csv', 'products.sql': 'dim_product.csv', 'sellers.sql': 'dim_seller.csv'})
+2024-10-16 11:34:47,443 - INFO - start extract data
+2024-10-16 11:34:47,445 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 11:34:47,838 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 11:34:47,838 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 11:34:48,169 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 11:34:48,169 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 11:34:48,186 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 11:34:48,187 - INFO - [pid 10864] Worker Worker(salt=9006325567, workers=1, host=Rian, username=fachr, pid=10864) done      ExtractTask(file_mapping={'customers.sql': 'dim_customer.csv', 'products.sql': 'dim_product.csv', 'sellers.sql': 'dim_seller.csv'})
+2024-10-16 11:34:48,188 - INFO - Informed scheduler that task   ExtractTask___customers_sql__e99b79bf4f   has status   DONE
+2024-10-16 11:34:48,188 - INFO - Worker Worker(salt=9006325567, workers=1, host=Rian, username=fachr, pid=10864) was stopped. Shutting down Keep-Alive thread
+2024-10-16 11:42:21,990 - INFO - logging configured by default settings
+2024-10-16 11:42:21,998 - INFO - Informed scheduler that task   ExtractTask___customers_sql__b2a1e87b7f   has status   PENDING
+2024-10-16 11:42:21,998 - INFO - Done scheduling tasks
+2024-10-16 11:42:21,999 - INFO - Running Worker with 1 processes
+2024-10-16 11:42:21,999 - INFO - [pid 22772] Worker Worker(salt=3745916961, workers=1, host=Rian, username=fachr, pid=22772) running   ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 11:42:22,050 - INFO - start extract data
+2024-10-16 11:42:22,051 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 11:42:22,450 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 11:42:22,450 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 11:42:22,770 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 11:42:22,770 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 11:42:22,786 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 11:42:22,786 - INFO - [pid 22772] Worker Worker(salt=3745916961, workers=1, host=Rian, username=fachr, pid=22772) done      ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 11:42:22,787 - INFO - Informed scheduler that task   ExtractTask___customers_sql__b2a1e87b7f   has status   DONE
+2024-10-16 11:42:22,788 - INFO - Worker Worker(salt=3745916961, workers=1, host=Rian, username=fachr, pid=22772) was stopped. Shutting down Keep-Alive thread
+2024-10-16 11:42:22,788 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 ran successfully:
+    - 1 ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 11:42:36,858 - INFO - logging configured by default settings
+2024-10-16 11:42:36,863 - INFO - Informed scheduler that task   ExtractTask___customers_sql__b2a1e87b7f   has status   PENDING
+2024-10-16 11:42:36,863 - INFO - Done scheduling tasks
+2024-10-16 11:42:36,863 - INFO - Running Worker with 1 processes
+2024-10-16 11:42:36,864 - INFO - [pid 5888] Worker Worker(salt=6201470791, workers=1, host=Rian, username=fachr, pid=5888) running   ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 11:42:36,907 - INFO - start extract data
+2024-10-16 11:42:36,907 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 11:42:37,300 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 11:42:37,300 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 11:42:37,607 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 11:42:37,607 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 11:42:37,625 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 11:42:37,625 - INFO - [pid 5888] Worker Worker(salt=6201470791, workers=1, host=Rian, username=fachr, pid=5888) done      ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 11:42:37,626 - INFO - Informed scheduler that task   ExtractTask___customers_sql__b2a1e87b7f   has status   DONE
+2024-10-16 11:42:37,627 - INFO - Worker Worker(salt=6201470791, workers=1, host=Rian, username=fachr, pid=5888) was stopped. Shutting down Keep-Alive thread
+2024-10-16 11:42:37,627 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 ran successfully:
+    - 1 ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
+2024-10-16 11:42:53,843 - INFO - logging configured by default settings
+2024-10-16 11:42:53,849 - INFO - Informed scheduler that task   ExtractTask___customers_sql__b2a1e87b7f   has status   PENDING
+2024-10-16 11:42:53,849 - INFO - Done scheduling tasks
+2024-10-16 11:42:53,849 - INFO - Running Worker with 1 processes
+2024-10-16 11:42:53,849 - INFO - [pid 14936] Worker Worker(salt=9733441632, workers=1, host=Rian, username=fachr, pid=14936) running   ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 11:42:53,892 - INFO - start extract data
+2024-10-16 11:42:53,892 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\customers.sql, file content : SELECT customer_id, customer_unique_id, customer_zip_code_prefix, customer_city, customer_state
+FROM customers
+2024-10-16 11:42:54,303 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_customer.csv
+2024-10-16 11:42:54,303 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\products.sql, file content : SELECT product_id,
+       product_category_name,
+       product_name_lenght AS product_name_length,
+       product_description_lenght AS product_description_length,
+       product_photos_qty,
+       product_weight_g,
+       product_length_cm,
+       product_height_cm,
+       product_width_cm
+FROM products
+2024-10-16 11:42:54,619 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_product.csv
+2024-10-16 11:42:54,619 - INFO -  file : C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\sql\sellers.sql, file content : SELECT seller_id, seller_zip_code_prefix, seller_city, seller_state
+FROM sellers
+2024-10-16 11:42:54,636 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\dim_seller.csv
+2024-10-16 11:42:54,638 - INFO - [pid 14936] Worker Worker(salt=9733441632, workers=1, host=Rian, username=fachr, pid=14936) done      ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+2024-10-16 11:42:54,639 - INFO - Informed scheduler that task   ExtractTask___customers_sql__b2a1e87b7f   has status   DONE
+2024-10-16 11:42:54,639 - INFO - Worker Worker(salt=9733441632, workers=1, host=Rian, username=fachr, pid=14936) was stopped. Shutting down Keep-Alive thread
+2024-10-16 11:42:54,640 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 ran successfully:
+    - 1 ExtractTask(file_mapping={"customers.sql": "dim_customer.csv", "products.sql": "dim_product.csv", "sellers.sql": "dim_seller.csv"})
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
