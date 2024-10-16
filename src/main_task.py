@@ -7,6 +7,7 @@ from luigi import build
 from src.config.common import PARENT_FOLDER
 from src.extract import extract_data
 from src.load import load_data
+from src.transform import transform_data
 
 
 class ExtractTask(luigi.Task):
@@ -38,15 +39,17 @@ class LoadTask(luigi.Task):
 
 
 class TransformTask(luigi.Task):
+    extract_file_mapping = luigi.Parameter()
+    load_file_mapping = luigi.Parameter()
 
     def requires(self):
-        return LoadTask()
+        return LoadTask(extract_file_mapping=extract_file_mapping, load_file_mapping=load_file_mapping)
 
     def output(self):
-        return luigi.LocalTarget('transformed.csv')
+        luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "transform", "status.csv"))
 
     def run(self):
-        pass
+        transform_data()
 
 
 if __name__ == '__main__':
@@ -63,5 +66,5 @@ if __name__ == '__main__':
     })
 
     build(
-        [LoadTask(extract_file_mapping=extract_file_mapping, load_file_mapping=load_file_mapping)],
+        [TransformTask(extract_file_mapping=extract_file_mapping, load_file_mapping=load_file_mapping)],
         local_scheduler=True)

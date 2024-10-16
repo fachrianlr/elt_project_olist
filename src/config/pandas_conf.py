@@ -4,11 +4,11 @@ from src.config.logging_conf import logger
 
 
 def total_data_csv(file_path):
-    df = pd.read_csv(file_path, header=None)
+    df = pd.read_csv(file_path)
     return len(df)
 
 
-def select_to_df(engine, sql):
+def select_to_df(sql, engine):
     try:
         # SQL query to select data
         query = sql
@@ -18,6 +18,14 @@ def select_to_df(engine, sql):
     except Exception as e:
         logger.error(f"Error querying the database: {e}")
         return None
+
+
+def df_to_sql(engine, df, table_name):
+    try:
+        df.to_sql(table_name, con=engine, if_exists='append', index=False)
+        logger.info(f"Table {table_name} successfully inserted")
+    except Exception as e:
+        logger.error(f"Error insert to database: {e}")
 
 
 def csv_to_sql(engine, csv_file, table_name):
@@ -35,3 +43,8 @@ def save_to_csv(df, file_path):
         logger.info(f"Data successfully saved to {file_path}")
     except Exception as e:
         logger.error(f"Error saving data to CSV: {e}")
+
+
+def inner_join_df(df1, df2, column_id):
+    merged_df = pd.merge(df1, df2, on=column_id, how='inner')
+    return merged_df

@@ -19,15 +19,12 @@ def read_file(file_path):
         return file.read()
 
 
-def write_csv(path, fieldnames, data):
+def write_csv(path, data):
     with open(path, mode="w", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=fieldnames)
-
-        # Write the header (field names)
-        writer.writeheader()
-
-        # Write the data rows
-        writer.writerows(data)
+        writer = csv.writer(file)
+        writer.writerow(data.keys())
+        writer.writerows(zip(*data.values()))
+    logger.info(f"succesfully wrote csv file: {path}")
 
 
 def load_data(file_mapping):
@@ -69,10 +66,8 @@ def load_data(file_mapping):
 
         csv_file_path = os.path.join(load_folder, "status.csv")
 
-        with open(csv_file_path, mode="w", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow(data.keys())
-            writer.writerows(zip(*data.values()))
+        write_csv(csv_file_path,  data=data)
+
 
     except Exception as e:
         logger.error(f"failed to load data: {e}")

@@ -1,0 +1,1 @@
+select product_id, product_sk from dim_product
