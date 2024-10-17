@@ -10,17 +10,15 @@ def total_data_csv(file_path):
 
 def select_to_df(sql, engine):
     try:
-        # SQL query to select data
-        query = sql
-        # Read query result into a pandas DataFrame using SQLAlchemy engine
-        df = pd.read_sql_query(query, engine)
+        logger.info(f"select data from : {format(sql)}")
+        df = pd.read_sql_query(sql, engine)
         return df
     except Exception as e:
         logger.error(f"Error querying the database: {e}")
         return None
 
 
-def df_to_sql(engine, df, table_name):
+def df_to_sql(df, table_name, engine):
     try:
         df.to_sql(table_name, con=engine, if_exists='append', index=False)
         logger.info(f"Table {table_name} successfully inserted")
@@ -28,7 +26,7 @@ def df_to_sql(engine, df, table_name):
         logger.error(f"Error insert to database: {e}")
 
 
-def csv_to_sql(engine, csv_file, table_name):
+def csv_to_sql(csv_file, table_name, engine):
     try:
         df = pd.read_csv(csv_file)
         df.to_sql(table_name, con=engine, if_exists='append', index=False)

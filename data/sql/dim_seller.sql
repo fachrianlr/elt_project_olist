@@ -1,1 +1,0 @@
-select seller_id, seller_sk from dim_seller

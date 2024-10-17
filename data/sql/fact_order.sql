@@ -1,1 +1,0 @@
-select order_id, order_sk from fact_order

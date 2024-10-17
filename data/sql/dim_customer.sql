@@ -1,1 +1,0 @@
-SELECT customer_id, customer_sk FROM dim_customer
