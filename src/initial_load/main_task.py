@@ -54,20 +54,29 @@ class TransformTask(luigi.Task):
 
 if __name__ == '__main__':
     extract_file_mapping = json.dumps({
-        'customers.sql': 'dim_customer.csv',
-        'products.sql': 'dim_product.csv',
-        'sellers.sql': 'dim_seller.csv'
+        'get_customers': 'customers.csv',
+        'get_products': 'products.csv',
+        'get_sellers': 'sellers.csv',
+        'get_geolocation': 'geolocation.csv',
+        'get_order_items': 'order_items.csv',
+        'get_order_payments': 'order_payments.csv',
+        'get_order_reviews': 'order_reviews.csv',
+        'get_orders': 'orders.csv',
+        'get_product_category_name_translation': 'product_category_name_translation.csv'
     })
 
     load_file_mapping = json.dumps({
-        'dim_customer.csv': 'dim_customer',
-        'dim_product.csv': 'dim_product',
-        'dim_seller.csv': 'dim_seller'
+        'customers.csv': 'customers',
+        'products.csv': 'products',
+        'sellers.csv': 'sellers',
+        'geolocation.csv': 'geolocation',
+        'orders.csv': 'orders',
+        'order_items.csv': 'order_items',
+        'order_payments.csv': 'order_payments',
+        'order_reviews.csv': 'order_reviews',
+        'product_category_name_translation.csv': 'product_category_name_translation'
     })
 
-    # build(
-    #     [TransformTask(extract_file_mapping=extract_file_mapping, load_file_mapping=load_file_mapping)],
-    #     local_scheduler=True)
-
     build(
-        [ExtractTask(extract_file_mapping=extract_file_mapping)], local_scheduler=True)
+        [TransformTask(extract_file_mapping=extract_file_mapping, load_file_mapping=load_file_mapping)],
+        local_scheduler=True)

@@ -1596,3 +1596,172 @@ LINE 1: ...t_id, product_category_name, product_name_length, product_de...
         from dim_seller
 2024-10-17 19:13:51,557 - INFO - Table fact_order_items successfully inserted
 2024-10-17 19:13:51,558 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\transform\status.csv
+2024-10-17 22:51:13,859 - INFO - start transform data
+2024-10-17 22:51:13,881 - INFO - Executing raw queries for: truncate table dim_customer cascade;
+        truncate table dim_product cascade;
+        truncate table dim_seller cascade;
+        truncate table fact_customer_feedback cascade;
+        truncate table fact_order cascade;
+        truncate table fact_order_items cascade;
+        truncate table fact_sales_analysis cascade;
+2024-10-17 22:51:13,922 - INFO - SQL executed successfully and changes committed.
+2024-10-17 22:51:13,922 - INFO - select data from : select * from customers
+2024-10-17 22:51:16,982 - INFO - Table dim_customer successfully inserted
+2024-10-17 22:51:16,982 - INFO - select data from : select product_id,
+               product_category_name,
+               product_name_lenght as product_name_length,
+               product_description_lenght as product_description_length,
+               product_photos_qty,
+               product_weight_g,
+               product_length_cm,
+               product_height_cm,
+               product_width_cm
+        from products
+2024-10-17 22:51:18,425 - INFO - Table dim_product successfully inserted
+2024-10-17 22:51:18,425 - INFO - select data from : select * from sellers
+2024-10-17 22:51:18,636 - INFO - Table dim_seller successfully inserted
+2024-10-17 22:51:18,637 - INFO - select data from : select order_id,
+               customer_id,
+               order_status,
+               order_approved_at,
+               order_purchase_timestamp,
+               order_delivered_carrier_date,
+               order_delivered_customer_date
+        from orders
+2024-10-17 22:51:19,161 - INFO - select data from : select customer_sk, customer_id
+        from dim_customer
+2024-10-17 22:51:27,859 - INFO - Table fact_order successfully inserted
+2024-10-17 22:51:27,859 - INFO - select data from : select order_id, order_item_id, product_id, seller_id, shipping_limit_date, price, freight_value
+        from order_items
+2024-10-17 22:51:28,321 - INFO - select data from : select order_id, order_sk
+        from fact_order
+2024-10-17 22:51:28,652 - INFO - select data from : select product_id, product_sk
+        from dim_product
+2024-10-17 22:51:28,768 - INFO - select data from : select seller_id, seller_sk
+        from dim_seller
+2024-10-17 22:51:35,942 - INFO - Table fact_order_items successfully inserted
+2024-10-17 22:51:35,942 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\transform\status.csv
+2024-10-17 22:52:22,535 - INFO - logging configured by default settings
+2024-10-17 22:52:22,623 - INFO - Informed scheduler that task   TransformTask___get_customers____customers_csv__3da2968205   has status   PENDING
+2024-10-17 22:52:22,623 - INFO - Informed scheduler that task   LoadTask___get_customers____customers_csv__3da2968205   has status   PENDING
+2024-10-17 22:52:22,624 - INFO - Informed scheduler that task   ExtractTask___get_customers__42436190c8   has status   PENDING
+2024-10-17 22:52:22,624 - INFO - Done scheduling tasks
+2024-10-17 22:52:22,624 - INFO - Running Worker with 1 processes
+2024-10-17 22:52:22,624 - INFO - [pid 26740] Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) running   ExtractTask(extract_file_mapping={"get_customers": "customers.csv", "get_products": "products.csv", "get_sellers": "sellers.csv", "get_geolocation": "geolocation.csv", "get_order_items": "order_items.csv", "get_order_payments": "order_payments.csv", "get_order_reviews": "order_reviews.csv", "get_orders": "orders.csv", "get_product_category_name_translation": "product_category_name_translation.csv"})
+2024-10-17 22:52:22,675 - INFO - start extract data
+2024-10-17 22:52:22,675 - INFO - query : SELECT * FROM public.customers
+2024-10-17 22:52:22,675 - INFO - select data from : SELECT * FROM public.customers
+2024-10-17 22:52:23,163 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\customers.csv
+2024-10-17 22:52:23,164 - INFO - query : SELECT * FROM products
+2024-10-17 22:52:23,164 - INFO - select data from : SELECT * FROM products
+2024-10-17 22:52:23,478 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\products.csv
+2024-10-17 22:52:23,478 - INFO - query : SELECT * FROM sellers
+2024-10-17 22:52:23,478 - INFO - select data from : SELECT * FROM sellers
+2024-10-17 22:52:23,494 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\sellers.csv
+2024-10-17 22:52:23,494 - INFO - query : SELECT * FROM geolocation
+2024-10-17 22:52:23,494 - INFO - select data from : SELECT * FROM geolocation
+2024-10-17 22:52:30,722 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\geolocation.csv
+2024-10-17 22:52:30,722 - INFO - query : SELECT * FROM order_items
+2024-10-17 22:52:30,722 - INFO - select data from : SELECT * FROM order_items
+2024-10-17 22:52:31,793 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\order_items.csv
+2024-10-17 22:52:31,794 - INFO - query : SELECT * FROM order_payments
+2024-10-17 22:52:31,794 - INFO - select data from : SELECT * FROM order_payments
+2024-10-17 22:52:32,309 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\order_payments.csv
+2024-10-17 22:52:32,310 - INFO - query : SELECT * FROM order_reviews
+2024-10-17 22:52:32,310 - INFO - select data from : SELECT * FROM order_reviews
+2024-10-17 22:52:33,186 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\order_reviews.csv
+2024-10-17 22:52:33,186 - INFO - query : SELECT * FROM orders
+2024-10-17 22:52:33,186 - INFO - select data from : SELECT * FROM orders
+2024-10-17 22:52:34,594 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\orders.csv
+2024-10-17 22:52:34,594 - INFO - query : SELECT * FROM product_category_name_translation
+2024-10-17 22:52:34,594 - INFO - select data from : SELECT * FROM product_category_name_translation
+2024-10-17 22:52:34,613 - INFO - Data successfully saved to C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\product_category_name_translation.csv
+2024-10-17 22:52:34,613 - INFO - [pid 26740] Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) done      ExtractTask(extract_file_mapping={"get_customers": "customers.csv", "get_products": "products.csv", "get_sellers": "sellers.csv", "get_geolocation": "geolocation.csv", "get_order_items": "order_items.csv", "get_order_payments": "order_payments.csv", "get_order_reviews": "order_reviews.csv", "get_orders": "orders.csv", "get_product_category_name_translation": "product_category_name_translation.csv"})
+2024-10-17 22:52:34,614 - INFO - Informed scheduler that task   ExtractTask___get_customers__42436190c8   has status   DONE
+2024-10-17 22:52:34,614 - INFO - [pid 26740] Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) running   LoadTask(extract_file_mapping={"get_customers": "customers.csv", "get_products": "products.csv", "get_sellers": "sellers.csv", "get_geolocation": "geolocation.csv", "get_order_items": "order_items.csv", "get_order_payments": "order_payments.csv", "get_order_reviews": "order_reviews.csv", "get_orders": "orders.csv", "get_product_category_name_translation": "product_category_name_translation.csv"}, load_file_mapping={"customers.csv": "customers", "products.csv": "products", "sellers.csv": "sellers", "geolocation.csv": "geolocation", "orders.csv": "orders", "order_items.csv": "order_items", "order_payments.csv": "order_payments", "order_reviews.csv": "order_reviews", "product_category_name_translation.csv": "product_category_name_translation"})
+2024-10-17 22:52:34,615 - INFO - start load data
+2024-10-17 22:52:34,616 - INFO - delete stg data
+2024-10-17 22:52:34,642 - INFO - Executing raw queries for: truncate table order_items cascade;
+        truncate table order_payments cascade;
+        truncate table order_reviews cascade;
+        truncate table orders cascade;
+        truncate table product_category_name_translation cascade;
+        truncate table geolocation cascade;
+        truncate table customers cascade;
+        truncate table products cascade;
+        truncate table sellers cascade;
+2024-10-17 22:52:34,692 - INFO - SQL executed successfully and changes committed.
+2024-10-17 22:52:37,670 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\customers.csv, Table Name: customers Successfully Inserted
+2024-10-17 22:52:39,052 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\products.csv, Table Name: products Successfully Inserted
+2024-10-17 22:52:39,300 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\sellers.csv, Table Name: sellers Successfully Inserted
+2024-10-17 22:53:45,615 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\geolocation.csv, Table Name: geolocation Successfully Inserted
+2024-10-17 22:53:51,767 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\orders.csv, Table Name: orders Successfully Inserted
+2024-10-17 22:53:58,312 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\order_items.csv, Table Name: order_items Successfully Inserted
+2024-10-17 22:54:05,997 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\order_payments.csv, Table Name: order_payments Successfully Inserted
+2024-10-17 22:54:11,214 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\order_reviews.csv, Table Name: order_reviews Successfully Inserted
+2024-10-17 22:54:11,533 - INFO - Source CSV: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\extract\product_category_name_translation.csv, Table Name: product_category_name_translation Successfully Inserted
+2024-10-17 22:54:11,536 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\load\status.csv
+2024-10-17 22:54:11,536 - INFO - [pid 26740] Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) done      LoadTask(extract_file_mapping={"get_customers": "customers.csv", "get_products": "products.csv", "get_sellers": "sellers.csv", "get_geolocation": "geolocation.csv", "get_order_items": "order_items.csv", "get_order_payments": "order_payments.csv", "get_order_reviews": "order_reviews.csv", "get_orders": "orders.csv", "get_product_category_name_translation": "product_category_name_translation.csv"}, load_file_mapping={"customers.csv": "customers", "products.csv": "products", "sellers.csv": "sellers", "geolocation.csv": "geolocation", "orders.csv": "orders", "order_items.csv": "order_items", "order_payments.csv": "order_payments", "order_reviews.csv": "order_reviews", "product_category_name_translation.csv": "product_category_name_translation"})
+2024-10-17 22:54:11,537 - INFO - Informed scheduler that task   LoadTask___get_customers____customers_csv__3da2968205   has status   DONE
+2024-10-17 22:54:11,537 - INFO - [pid 26740] Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) running   TransformTask(extract_file_mapping={"get_customers": "customers.csv", "get_products": "products.csv", "get_sellers": "sellers.csv", "get_geolocation": "geolocation.csv", "get_order_items": "order_items.csv", "get_order_payments": "order_payments.csv", "get_order_reviews": "order_reviews.csv", "get_orders": "orders.csv", "get_product_category_name_translation": "product_category_name_translation.csv"}, load_file_mapping={"customers.csv": "customers", "products.csv": "products", "sellers.csv": "sellers", "geolocation.csv": "geolocation", "orders.csv": "orders", "order_items.csv": "order_items", "order_payments.csv": "order_payments", "order_reviews.csv": "order_reviews", "product_category_name_translation.csv": "product_category_name_translation"})
+2024-10-17 22:54:11,539 - INFO - start transform data
+2024-10-17 22:54:11,574 - INFO - Executing raw queries for: truncate table dim_customer cascade;
+        truncate table dim_product cascade;
+        truncate table dim_seller cascade;
+        truncate table fact_customer_feedback cascade;
+        truncate table fact_order cascade;
+        truncate table fact_order_items cascade;
+        truncate table fact_sales_analysis cascade;
+2024-10-17 22:54:11,609 - INFO - SQL executed successfully and changes committed.
+2024-10-17 22:54:11,610 - INFO - select data from : select * from customers
+2024-10-17 22:54:15,014 - INFO - Table dim_customer successfully inserted
+2024-10-17 22:54:15,014 - INFO - select data from : select product_id,
+               product_category_name,
+               product_name_lenght as product_name_length,
+               product_description_lenght as product_description_length,
+               product_photos_qty,
+               product_weight_g,
+               product_length_cm,
+               product_height_cm,
+               product_width_cm
+        from products
+2024-10-17 22:54:16,469 - INFO - Table dim_product successfully inserted
+2024-10-17 22:54:16,469 - INFO - select data from : select * from sellers
+2024-10-17 22:54:16,677 - INFO - Table dim_seller successfully inserted
+2024-10-17 22:54:16,677 - INFO - select data from : select order_id,
+               customer_id,
+               order_status,
+               order_approved_at,
+               order_purchase_timestamp,
+               order_delivered_carrier_date,
+               order_delivered_customer_date
+        from orders
+2024-10-17 22:54:17,192 - INFO - select data from : select customer_sk, customer_id
+        from dim_customer
+2024-10-17 22:54:26,616 - INFO - Table fact_order successfully inserted
+2024-10-17 22:54:26,616 - INFO - select data from : select order_id, order_item_id, product_id, seller_id, shipping_limit_date, price, freight_value
+        from order_items
+2024-10-17 22:54:27,428 - INFO - select data from : select order_id, order_sk
+        from fact_order
+2024-10-17 22:54:27,865 - INFO - select data from : select product_id, product_sk
+        from dim_product
+2024-10-17 22:54:27,971 - INFO - select data from : select seller_id, seller_sk
+        from dim_seller
+2024-10-17 22:54:35,631 - INFO - Table fact_order_items successfully inserted
+2024-10-17 22:54:35,631 - INFO - succesfully wrote csv file: C:\Users\fachr\Documents\Rian\DataEngineer\Pacmann\Data Warehouse\elt_project_olist\data\transform\status.csv
+2024-10-17 22:54:35,681 - INFO - [pid 26740] Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) done      TransformTask(extract_file_mapping={"get_customers": "customers.csv", "get_products": "products.csv", "get_sellers": "sellers.csv", "get_geolocation": "geolocation.csv", "get_order_items": "order_items.csv", "get_order_payments": "order_payments.csv", "get_order_reviews": "order_reviews.csv", "get_orders": "orders.csv", "get_product_category_name_translation": "product_category_name_translation.csv"}, load_file_mapping={"customers.csv": "customers", "products.csv": "products", "sellers.csv": "sellers", "geolocation.csv": "geolocation", "orders.csv": "orders", "order_items.csv": "order_items", "order_payments.csv": "order_payments", "order_reviews.csv": "order_reviews", "product_category_name_translation.csv": "product_category_name_translation"})
+2024-10-17 22:54:35,682 - INFO - Informed scheduler that task   TransformTask___get_customers____customers_csv__3da2968205   has status   DONE
+2024-10-17 22:54:35,682 - INFO - Worker Worker(salt=1432567030, workers=1, host=Rian, username=fachr, pid=26740) was stopped. Shutting down Keep-Alive thread
+2024-10-17 22:54:35,683 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 3 ran successfully:
+    - 1 ExtractTask(...)
+    - 1 LoadTask(...)
+    - 1 TransformTask(...)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+
