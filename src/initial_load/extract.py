@@ -2,7 +2,6 @@ import os
 
 from dotenv import load_dotenv
 
-from src.config.common import PARENT_FOLDER
 from src.config.db_conf import connect_to_db, load_queries_from_xml
 from src.config.logging_conf import logger
 from src.config.pandas_conf import select_to_df, save_to_csv
@@ -13,19 +12,23 @@ DB_URI = os.getenv("SRC_DB_URI")
 
 
 def extract_data(file_mapping):
-    # Connect to the database
-    engine = connect_to_db(DB_URI)
-    query_path = os.path.join(PARENT_FOLDER, "data", "sql", "extract.xml")
-    extract_queries = load_queries_from_xml(query_path)
+    try:
+        engine = connect_to_db(DB_URI)
+        query_path = os.path.join("sql", "extract.xml")
+        extract_queries = load_queries_from_xml(query_path)
 
-    logger.info("start extract data")
+        logger.info("start extract resources")
 
-    for query_id, csv_name in file_mapping.items():
-        str_sql = extract_queries.get(query_id)
-        logger.info(f"query : {str_sql}")
-        df = select_to_df(str_sql, engine)
-        dim_customer_path = os.path.join(PARENT_FOLDER, "data", "extract", csv_name)
-        save_to_csv(df, dim_customer_path)
+        for query_id, csv_name in file_mapping.items():
+            str_sql = extract_queries.get(query_id)
+            logger.info(f"query : {str_sql}")
+            df = select_to_df(str_sql, engine)
+            csv_path = os.path.join("resources", "extract", csv_name)
+            save_to_csv(df, csv_path)
+
+    except Exception as e:
+        logger.error(f"failed to extract data: {e}")
+        raise e
 
 
 if __name__ == '__main__':

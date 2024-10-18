@@ -19,7 +19,7 @@ def transform_data():
     stg_engine = connect_to_db(STG_DB_URI)
     dwh_engine = connect_to_db(DWH_DB_URI)
 
-    logger.info("start transform data")
+    logger.info("start transform resources")
 
     try:
         table_name_list = []
@@ -27,10 +27,10 @@ def transform_data():
         end_date_list = []
         total_data_list = []
 
-        query_path = os.path.join(PARENT_FOLDER, "data", "sql", "transform.xml")
+        query_path = os.path.join("sql", "transform.xml")
         transform_queries = load_queries_from_xml(query_path)
 
-        # delete data dwh
+        # delete resources dwh
         str_sql = transform_queries.get("delete_data_dwh")
         execute_raw_queries(str_sql, dwh_engine)
 
@@ -154,8 +154,7 @@ def transform_data():
         end_date_list.append(end_date)
         total_data_list.append(total_data)
 
-
-        extract_folder = os.path.join(PARENT_FOLDER, "data", "transform")
+        extract_folder = os.path.join("resources", "transform")
 
         data = {
             "table_name": table_name_list,
@@ -168,8 +167,8 @@ def transform_data():
 
         write_csv(csv_file_path, data=data)
     except Exception as e:
-        logger.error(f"failed to load data: {e}")
-        return
+        logger.error(f"failed to transform data: {e}")
+        raise e
 
 
 if __name__ == '__main__':

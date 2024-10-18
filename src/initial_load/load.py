@@ -26,18 +26,18 @@ def load_data(file_mapping):
     # Connect to the database
     engine = connect_to_db(DB_URI)
 
-    logger.info("start load data")
+    logger.info("start load resources")
 
     try:
-        query_path = os.path.join(PARENT_FOLDER, "data", "sql", "load.xml")
+        query_path = os.path.join("sql", "load.xml")
         load_queries = load_queries_from_xml(query_path)
 
-        logger.info(f"delete stg data")
+        logger.info(f"delete stg resources")
         str_sql = load_queries.get("delete_stg_data")
         execute_raw_queries(str_sql, engine)
 
-        extract_folder = os.path.join(PARENT_FOLDER, "data", "extract")
-        load_folder = os.path.join(PARENT_FOLDER, "data", "load")
+        extract_folder = os.path.join("resources", "extract")
+        load_folder = os.path.join("resources", "load")
 
         csv_name_list = []
         start_date_list = []
@@ -65,7 +65,7 @@ def load_data(file_mapping):
 
     except Exception as e:
         logger.error(f"failed to load data: {e}")
-        return
+        raise e
 
 
 if __name__ == '__main__':

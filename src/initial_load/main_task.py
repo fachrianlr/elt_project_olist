@@ -4,7 +4,6 @@ import os
 import luigi
 from luigi import build
 
-from src.config.common import PARENT_FOLDER
 from src.initial_load.extract import extract_data
 from src.initial_load.load import load_data
 from src.initial_load.transform import transform_data
@@ -15,8 +14,8 @@ class ExtractTask(luigi.Task):
 
     def output(self):
         file_mapping_dict = json.loads(extract_file_mapping)
-        return {csv_name: luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "extract", csv_name)) for _, csv_name in
-                file_mapping_dict.items()}
+        return {csv_name: luigi.LocalTarget(os.path.join("resources", "extract", csv_name)) for
+                _, csv_name in file_mapping_dict.items()}
 
     def run(self):
         file_mapping_dict = json.loads(extract_file_mapping)
@@ -31,7 +30,7 @@ class LoadTask(luigi.Task):
         return ExtractTask(extract_file_mapping=self.extract_file_mapping)
 
     def output(self):
-        return luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "load", "status.csv"))
+        return luigi.LocalTarget(os.path.join("resources", "load", "status.csv"))
 
     def run(self):
         file_mapping_dict = json.loads(load_file_mapping)
@@ -46,7 +45,7 @@ class TransformTask(luigi.Task):
         return LoadTask(extract_file_mapping=self.extract_file_mapping, load_file_mapping=self.load_file_mapping)
 
     def output(self):
-        return luigi.LocalTarget(os.path.join(PARENT_FOLDER, "data", "transform", "status.csv"))
+        return luigi.LocalTarget(os.path.join("resources", "transform", "status.csv"))
 
     def run(self):
         transform_data()

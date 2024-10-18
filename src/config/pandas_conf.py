@@ -15,7 +15,7 @@ def select_to_df(sql, engine):
         return df
     except Exception as e:
         logger.error(f"Error querying the database: {e}")
-        return None
+        raise e
 
 
 def df_to_sql(df, table_name, engine):
@@ -23,7 +23,8 @@ def df_to_sql(df, table_name, engine):
         df.to_sql(table_name, con=engine, if_exists='append', index=False)
         logger.info(f"Table {table_name} successfully inserted")
     except Exception as e:
-        logger.error(f"Error insert to database: {e}")
+        logger.error(f"Error df_to_sql insert to database: {e}")
+        raise e
 
 
 def csv_to_sql(csv_file, table_name, engine):
@@ -32,7 +33,8 @@ def csv_to_sql(csv_file, table_name, engine):
         df.to_sql(table_name, con=engine, if_exists='append', index=False)
         logger.info(f"Source CSV: {csv_file}, Table Name: {table_name} Successfully Inserted")
     except Exception as e:
-        logger.error(f"Error insert to database: {e}")
+        logger.error(f"Error csv_to_sql insert to database: {e}")
+        raise e
 
 
 def save_to_csv(df, file_path):
@@ -41,6 +43,7 @@ def save_to_csv(df, file_path):
         logger.info(f"Data successfully saved to {file_path}")
     except Exception as e:
         logger.error(f"Error saving data to CSV: {e}")
+        raise e
 
 
 def inner_join_df(df1, df2, column_id):

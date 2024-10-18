@@ -12,7 +12,7 @@ def connect_to_db(db_uri):
         return engine
     except Exception as e:
         logger.error(f"Error connecting to the database: {e}")
-        return
+        raise e
 
 
 def load_queries_from_xml(file_path):
@@ -41,3 +41,4 @@ def execute_raw_queries(str_sql, engine):
             # Rollback in case of error
             trans.rollback()
             logger.error(f"Error executing SQL: {e}")
+            raise e
