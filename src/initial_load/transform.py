@@ -122,6 +122,39 @@ def transform_data():
         end_date_list.append(end_date)
         total_data_list.append(total_data)
 
+        # insert to fact_customer_feedback
+        start_date = datetime.now()
+        order_review_sql = transform_queries.get("getOrderReviewStg")
+        order_review_df = select_to_df(order_review_sql, stg_engine)
+
+        merge_order_df = inner_join_df(order_review_df, fact_order_df, "order_id")
+        merge_order_df = merge_order_df.drop("order_id", axis=1)
+        df_to_sql(merge_order_df, "fact_customer_feedback", dwh_engine)
+
+        total_data = len(merge_order_df)
+        end_date = datetime.now()
+        table_name_list.append("fact_customer_feedback")
+        start_date_list.append(start_date)
+        end_date_list.append(end_date)
+        total_data_list.append(total_data)
+
+        # insert to fact_sales_analysis
+        start_date = datetime.now()
+        sales_analysis_sql = transform_queries.get("getFactSalesAnalysis")
+        sales_analysis_df = select_to_df(sales_analysis_sql, stg_engine)
+
+        merge_order_df = inner_join_df(sales_analysis_df, dim_product_df, "product_id")
+        merge_order_df = merge_order_df.drop("product_id", axis=1)
+        df_to_sql(merge_order_df, "fact_sales_analysis", dwh_engine)
+
+        total_data = len(merge_order_df)
+        end_date = datetime.now()
+        table_name_list.append("fact_sales_analysis")
+        start_date_list.append(start_date)
+        end_date_list.append(end_date)
+        total_data_list.append(total_data)
+
+
         extract_folder = os.path.join(PARENT_FOLDER, "data", "transform")
 
         data = {

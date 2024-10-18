@@ -100,4 +100,28 @@
         from dim_seller
         ]]>
     </query>
+
+    <query id="getOrderReviewStg">
+        <![CDATA[
+        select review_id, order_id, review_score, review_comment_title, review_comment_message, review_creation_date
+        from order_reviews
+        ]]>
+    </query>
+
+    <query id="getFactSalesAnalysis">
+        <![CDATA[
+        SELECT oi.product_id                    AS product_id,
+               o.order_purchase_timestamp::date AS order_date,
+               SUM(op.payment_value)            AS total_sales,
+               COUNT(oi.product_id)             AS total_quantity
+        FROM order_items oi
+                 JOIN
+             orders o ON oi.order_id = o.order_id
+                 JOIN
+             order_payments op ON oi.order_id = op.order_id
+        WHERE o.order_status IN ('delivered', 'shipped', 'invoiced')
+        GROUP BY o.order_purchase_timestamp::date, oi.product_id
+        ORDER BY order_date
+        ]]>
+    </query>
 </queries>
