@@ -169,6 +169,7 @@ def transform_data():
         write_csv(csv_file_path, data=data)
     except Exception as e:
         logger.error(f"failed to load data: {e}")
+        return
 
 
 if __name__ == '__main__':

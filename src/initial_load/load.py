@@ -65,6 +65,7 @@ def load_data(file_mapping):
 
     except Exception as e:
         logger.error(f"failed to load data: {e}")
+        return
 
 
 if __name__ == '__main__':
