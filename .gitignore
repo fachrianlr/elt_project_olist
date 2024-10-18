@@ -57,4 +57,4 @@ coverage.xml
 *.swo
 *.sublime-project
 logs/
-data/
+data/*/*.csv
