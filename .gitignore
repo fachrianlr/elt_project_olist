@@ -58,3 +58,12 @@ coverage.xml
 *.sublime-project
 logs/
 data/*/*.csv
+/src/initial_load/resources/extract/customers.csv
+/src/initial_load/resources/extract/geolocation.csv
+/src/initial_load/resources/extract/order_items.csv
+/src/initial_load/resources/extract/order_payments.csv
+/src/initial_load/resources/extract/order_reviews.csv
+/src/initial_load/resources/extract/orders.csv
+/src/initial_load/resources/extract/product_category_name_translation.csv
+/src/initial_load/resources/extract/products.csv
+/src/initial_load/resources/extract/sellers.csv
